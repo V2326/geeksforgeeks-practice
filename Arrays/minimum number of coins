@@ -1,0 +1,12 @@
+class Solution {
+    public int findMin(int n) {
+        // code here
+        int[] coins={10,5,2,1};
+        int c=0;
+        for(int coin:coins){
+            c+=n/coin;
+            n=n%coin;
+        }
+        return c;
+    }
+}
